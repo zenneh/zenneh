@@ -1,22 +1,152 @@
 body {
-  color: #222;
   font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+  margin: 0 auto;
+  max-width: var(--main-width);
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
+  background-color: var(--background);
+  color: var(--text);
 }
 
 header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+  font-family: "Literata";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--header-top-gap);
+  margin-bottom: var(--header-bottom-gap);
+  height: var(--header-height);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: var(--menu-gap);
+}
+
+nav ul li a {
+  font-family: "Monaspace";
+  font-size: var(--font-body);
+  color: var(--text);
+}
+
+nav ul li a.active {
+  font-family: "Monaspace";
+  font-weight: bold;
+  color: var(--primary);
+}
+
+main {
+  min-height: var(--content-height);
 }
 
 footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+  font-size: var(--font-label);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--footer-height);
+}
+
+footer a,b {
+  font-family: "Monaspace";
+  margin-left: .2rem;
+  margin-right: .2rem;
+  color: var(--primary);
 }
 
 a {
-  color: #00e;
-  text-decoration: none;
+  color: var(--text);
 }
+
+main p > strong {
+  color: var(--primary);
+}
+main p a {
+  position: relative;
+  color: var(--secondary);
+}
+
+main pre {
+  padding: .6em 1em;
+  border-radius: var(--border);
+  font-family: "Jetbrains mono";
+}
+
+/* Custom classes */
+.site-title {
+  color: var(--text);
+  font-size: var(--font-title);
+}
+
+.posts ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--posts-gap);
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post .title {
+  font-size: var(--font-h5);
+  margin-bottom: var(--posts-title-bottom-gap);
+}
+
+.post .summary {
+  font-size: var(--font-body);
+  margin-bottom: var(--posts-summary-bottom-gap);
+}
+
+.post .date{
+  font-size: var(--font-label);
+}
+
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* link */
+.socials a {
+  display: flex;  
+  gap: .6rem;
+  align-items: center;
+  padding: .2rem .6rem;
+  fill: var(--primary);
+  opacity: .8;
+  transition: opacity .2s ease-in-out;
+}
+
+.socials a:hover {
+  display: flex;  
+  gap: .6rem;
+  align-items: center;
+  padding: .2rem .6rem;
+  opacity: 1;
+}
+
+
+/* Icon */
+.svg-container {
+  width: 20px;
+  heigth: 20px;
+  overflow: hidden;
+}
+.svg-container svg {
+  height: 100%;  
+  width: 100%;
+}
+
+/* Name */
+.socials a p {
+  font-size: var(--font-body);
+  font-family: "Monaspaced";
+  color: var(--primary);
+}
+
+

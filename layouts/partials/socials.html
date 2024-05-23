@@ -1,0 +1,33 @@
+<span class="socials">
+  {{- with site.Params.author.git }}
+    {{- partial "inline/socials/link.html" (dict "svg" "assets/svg/github.svg" "company" "GitHub" "url" .)}}
+  {{- end}}
+  <b>
+  ~
+  </b>
+  {{- with site.Params.author.instagram}}
+    {{- partial "inline/socials/link.html" (dict "svg" "assets/svg/instagram.svg" "company" "Instagram" "url" .)}}
+  {{- end}}
+</span>
+
+{{- define "partials/inline/svg/load.html"}}
+  {{- $svgPath := . -}}
+  {{- $svg := readFile $svgPath -}}
+  {{- if $svg }}
+      {{- $svg | safeHTML -}}
+  {{- else }}
+      <p>SVG not found: {{ $svgPath }}</p>
+{{- end }}
+
+{{- end}}
+
+{{- define "partials/inline/socials/link.html"}}
+  <a href="{{ $.url }}">
+    <div class="svg-container">
+      {{- partial "inline/svg/load.html" $.svg }}
+    </div>
+
+
+    <p>{{- $.company}}</p>
+  </a>
+{{- end}}

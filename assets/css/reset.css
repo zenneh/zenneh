@@ -4,6 +4,8 @@
 
 * {
   margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 body {
@@ -22,4 +24,31 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+
+ol,ul {
+  list-style: none;
+}
+
+main h1 {
+  margin-bottom: calc(var(--font-h1) / 3);
+}
+main h2 {
+  margin-bottom: calc(var(--font-h2) / 3);
+}
+main h3 {
+  margin-bottom: calc(var(--font-h3) / 3);
+}
+main h4 {
+  margin-bottom: calc(var(--font-h4) / 3);
+}
+main h5 {
+  margin-bottom: calc(var(--font-h5) / 3);
+}
+main pre {
+  margin-bottom: calc(var(--font-body) / 2);
+}
+main p,a,b,i {
+  margin-bottom: calc(var(--font-body));
 }

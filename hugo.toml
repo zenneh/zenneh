@@ -1,21 +1,30 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Very cool site"
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
+markup.highlight.style = "github-dark"
+
 
 [[menus.main]]
 name = 'Posts'
 pageRef = '/posts'
+weight = 10
+
+[[menus.main]]
+name = "Dots"
+url = "/dots"
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'Contact'
+pageRef = '/contact'
 weight = 30
+
+[params]
+[params.author]
+name = "Zenneh"
+git = "https://github.com/zenneh"
+instagram = "https://instagram.com/senne-wertelaers"
 
 [module]
   [module.hugoVersion]

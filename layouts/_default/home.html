@@ -1,7 +1,23 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <section class="posts">
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    <ul>
+      {{ range $posts}}
+        <li>
+          {{ partial "inline/post/navigation.html" .}}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  {{- partial "socials.html"}}
 {{ end }}
+
+{{- define "partials/inline/post/navigation.html"}}
+  <div class="post">
+    <a href="{{ .Permalink }}"><h4 class="title">{{ .Title }}</h4></a>
+    <p class="summary">{{ default .Summary }}</p>
+    <p class="date"><time>{{ time.Format "January 2, 2006" .Date }}</time></p>
+  </div>
+{{- end}}

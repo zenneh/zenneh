@@ -18,6 +18,10 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
+hr {
+  border: none;
+}
+
 input, button, textarea, select {
   font: inherit;
 }
@@ -31,24 +35,37 @@ ol,ul {
   list-style: none;
 }
 
-main h1 {
+section { 
+  margin-bottom: 3rem;
+}
+
+.content {
+  font-family: "Open Sans";
+}
+
+.content h1 {
   margin-bottom: calc(var(--font-h1) / 3);
 }
-main h2 {
+.content h2 {
   margin-bottom: calc(var(--font-h2) / 3);
 }
-main h3 {
+.content h3 {
   margin-bottom: calc(var(--font-h3) / 3);
 }
-main h4 {
+.content h4 {
   margin-bottom: calc(var(--font-h4) / 3);
 }
-main h5 {
+.content h5 {
   margin-bottom: calc(var(--font-h5) / 3);
 }
-main pre {
+.content pre {
   margin-bottom: calc(var(--font-body) / 2);
 }
-main p,a,b,i {
+
+.content p,
+.content a,
+.content b,
+.content i {
   margin-bottom: calc(var(--font-body));
 }
+

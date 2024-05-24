@@ -1,23 +1,17 @@
 {{ define "main" }}
-  {{ .Content }}
-  <section class="posts">
-    {{ $posts := where .Site.RegularPages "Section" "posts" }}
-    <ul>
-      {{ range $posts}}
-        <li>
-          {{ partial "inline/post/navigation.html" .}}
-        </li>
-      {{ end }}
-    </ul>
+  {{ partial "inline/banner.html"}}
+  <section class="content">
+    {{ .Content }}
   </section>
-
   {{- partial "socials.html"}}
 {{ end }}
 
-{{- define "partials/inline/post/navigation.html"}}
-  <div class="post">
-    <a href="{{ .Permalink }}"><h4 class="title">{{ .Title }}</h4></a>
-    <p class="summary">{{ default .Summary }}</p>
-    <p class="date"><time>{{ time.Format "January 2, 2006" .Date }}</time></p>
-  </div>
-{{- end}}
+{{- define "partials/inline/banner.html"}}
+<pre style="font-family: 'Monaspace'; text-align: center; margin-bottom: 4rem;">
+  _____                                _     
+ |__  /   ___   _ __    _ __     ___  | |__  
+   / /   / _ \ | '_ \  | '_ \   / _ \ | '_ \ 
+  / /_  |  __/ | | | | | | | | |  __/ | | | |
+ /____|  \___| |_| |_| |_| |_|  \___| |_| |_|
+</pre>
+{{- end }}

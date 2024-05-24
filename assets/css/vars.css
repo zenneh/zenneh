@@ -42,7 +42,7 @@
     --code-margin-bottom: 2rem;
 
     /* Posts */
-    --posts-gap: .8rem;
+    --posts-gap: .2rem;
     --posts-title-bottom-gap: .1rem;
     --posts-summary-bottom-gap: .2rem;
 
@@ -68,11 +68,17 @@
     --content-height: calc(100vh - var(--header-top-gap) - var(--header-height) - var(--header-bottom-gap) - var(--footer-height));
 
     /* Theme */
-    --text: #e2eee8;
-    --background: #040605;
-    --primary: #afcfc0;
-    --secondary: #42636d;
-    --accent: #7d9db1;
+    /* --text: #e2eee8; */
+    /* --background: #040605; */
+    /* --surface: #040605; */
+    /* --primary: #afcfc0; */
+    /* --secondary: #42636d; */
+    /* --accent: #7d9db1; */
+    --text: hsl(0, 2%, 91%);
+    --background: hsl(0, 20%, 2%);
+    --primary: hsl(0, 18%, 71%);
+    --secondary: hsl(0, 24%, 31%);
+    --accent: hsl(0, 32%, 58%);
 }
 
 @media screen and (max-width: 1024px) {

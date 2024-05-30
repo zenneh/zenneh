@@ -56,7 +56,8 @@ footer {
 hr {
   background-color: var(--background-600);
   height: 1px;
-  margin: .1rem 0;
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
 }
 
 /* Main Content styling */
@@ -133,12 +134,11 @@ main {
     margin-bottom: calc(var(--font-body) / 2);
   }
 
-  p,
   a,
-  b,
-  i {
-    margin-bottom: calc(var(--font-body));
-  }
+  p,
+  {
+  margin-bottom: calc(var(--font-body));
+}
 }
 
 .socials {
@@ -187,7 +187,6 @@ main {
 .post {
   display: flex;
   gap: 3rem;
-  font-family: "Literata";
   font-size: var(--font-body);
   border-radius: var(--border);
   margin: .2rem 0;
@@ -215,4 +214,18 @@ main {
   border: .1rem solid var(--primary);
   font-size: var(--font-label);
   color: var(--primary);
+
+  &:hover {
+    background-color: var(--primary);
+    color: var(--background);
+  }
+}
+
+.banner {
+  aspect-ratio: 10/4;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border);
+  margin-bottom: var(--font-body);
+  background-color: var(--background-600);
 }

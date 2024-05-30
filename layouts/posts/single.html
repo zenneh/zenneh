@@ -1,17 +1,27 @@
-
 {{ define "main" }}
-  {{- with .Params.banner }}
-    <img src="{{ . }}" alt="banner"/>
-  {{- end}}
 
-  {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{- $dateHuman := .Date | time.Format ":date_long" }}
-  <p>{{ .Title }}</p>
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+{{- $banner := .Resources.GetMatch "banner.*" }}
+
+{{- if $banner }}
+{{- $banner = $banner.Process "png" }}
+{{- end }}
+
+{{- with .Params.banner }}
+{{- $banner = resources.Get . }}
+{{- end }}
+
+{{- with $banner }}
+<img class="banner" src="{{ .RelPermalink }}" alt="banner">
+{{- end }}
+
+{{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{- $dateHuman := .Date | time.Format ":date_long" }}
+<p>{{ .Title }}</p>
+<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
 
 
-  <section class="content">
-    {{ .Content }}
-  </section>
+<section class="content">
+  {{ .Content }}
+</section>
 {{ end }}

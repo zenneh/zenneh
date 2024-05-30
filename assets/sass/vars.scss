@@ -82,8 +82,8 @@ $theme: create-theme($colors);
   --font-caption: 0.79rem;
 
   /* Font families */
-  --font-family-text: "Inter";
-  --font-family-mono: "Monaspace";
+  --font-family-text: "Inter", "Open Sans";
+  --font-family-mono: "Monaspace", "Monospace";
 }
 
 @media screen and (max-width: 1024px) {

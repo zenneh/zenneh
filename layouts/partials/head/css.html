@@ -1,7 +1,6 @@
 {{- $CSS := slice
 (resources.Get "css/reset.css")
 (resources.Get "css/vars.css")
-(resources.Get "css/syntax.css")
 (resources.Get "css/fonts.css")
 (resources.Get "css/main.css") | 
 resources.Concat "assets/combined.css" |

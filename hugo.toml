@@ -6,18 +6,18 @@ markup.highlight.style = "github-dark"
 
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'root'
+pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = "Dots"
-pageRef = "/dots"
+name = 'posts'
+pageRef = '/posts'
 weight = 20
 
 [[menus.main]]
-name = 'Contact'
-pageRef = '/contact'
+name = "dots"
+pageRef = "/dots"
 weight = 30
 
 [params]

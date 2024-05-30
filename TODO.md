@@ -1,5 +1,11 @@
 # TODO
 
+## Refactor
+
+- Fix theme
+- refactor css to scss
+- Select 2 main fonts
+
 ## Navigation
 
 - css for navbar

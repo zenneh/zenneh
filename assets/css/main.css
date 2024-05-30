@@ -49,7 +49,8 @@ footer {
   height: var(--footer-height);
 }
 
-footer a,b {
+footer a,
+b {
   margin-left: .2rem;
   margin-right: .2rem;
   color: var(--primary);
@@ -65,9 +66,10 @@ hr {
   margin: .6rem 0;
 }
 
-main p > strong {
+main p>strong {
   color: var(--secondary);
 }
+
 main p a {
   position: relative;
   color: var(--secondary);
@@ -110,12 +112,12 @@ main pre {
   font-size: var(--font-title);
 }
 
-.posts > h4 {
+.posts>h4 {
   margin-bottom: .6rem;
   /* padding: 0 .6rem; */
 }
 
-.posts > ul {
+.posts>ul {
   display: flex;
   flex-direction: column;
   gap: var(--posts-gap);
@@ -156,8 +158,7 @@ main pre {
   font-weight: bold;
 }
 
-#post-link-date{
-}
+#post-link-date {}
 
 
 .socials {
@@ -169,7 +170,7 @@ main pre {
 
 /* link */
 .socials a {
-  display: flex;  
+  display: flex;
   gap: .6rem;
   align-items: center;
   padding: .2rem .6rem;
@@ -179,7 +180,7 @@ main pre {
 }
 
 .socials a:hover {
-  display: flex;  
+  display: flex;
   gap: .6rem;
   align-items: center;
   padding: .2rem .6rem;
@@ -193,8 +194,9 @@ main pre {
   heigth: 20px;
   overflow: hidden;
 }
+
 .svg-container svg {
-  height: 100%;  
+  height: 100%;
   width: 100%;
 }
 
@@ -204,5 +206,3 @@ main pre {
   font-family: "Monaspaced";
   color: var(--primary);
 }
-
-

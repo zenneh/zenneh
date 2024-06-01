@@ -1,12 +1,34 @@
+@mixin syntax {
+  $background-color: var(--background-600);
+  $text-color: var(--text-400);
+  $keyword-color: var(--primary-400);
+  $string-color: var(--accent);
+  $comment-color: var(--background-400);
+  $function-color: var(--primary-400);
+
+  .chroma {
+    color: $text-color;
+    background-color: $background-color;
+
+    .x {}
+
+    .bg {}
+
+    .cl {}
+
+    .err {}
+  }
+}
+
 /* Background */
 .bg {
-  color: #e6edf3;
+  color: text-color;
   background-color: var(--background-400);
 }
 
 /* PreWrapper */
 .chroma {
-  color: #e6edf3;
+  color: text-color;
   background-color: var(--background-400);
 }
 
@@ -46,7 +68,7 @@
 
 /* LineHighlight */
 .chroma .hl {
-  background-color: #6e7681
+  background-color: background
 }
 
 /* LineNumbersTable */
@@ -66,7 +88,7 @@
   user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
-  color: #6e7681
+  color: background
 }
 
 /* Line */
@@ -438,5 +460,5 @@
 
 /* TextWhitespace */
 .chroma .w {
-  color: #6e7681
+  color: background
 }

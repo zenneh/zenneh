@@ -4,7 +4,6 @@ title = "Very cool site"
 
 markup.highlight.style = "github-dark"
 
-
 [[menus.main]]
 name = 'root'
 pageRef = '/'
@@ -24,7 +23,7 @@ weight = 30
 [params.author]
 name = "Zenneh"
 git = "https://github.com/zenneh"
-instagram = "https://instagram.com/senne-wertelaers"
+instagram = "https://instagram.com/senne.wertelaers"
 
 [module]
   [module.hugoVersion]

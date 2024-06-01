@@ -1,29 +1,30 @@
 @use "sass:map";
 
 @function create-shades($color) {
-  $shades: ();
-  
-  @for $i from 1 through 9 {
-    $percentage: 10% * $i;
-    $shade: adjust-color($color, $lightness: $percentage - 50%);
-    $shades: map-merge($shades, (100 * $i: $shade));
-  }
-  
-  @return $shades;
+  $shades: (
+  );
+
+@for $i from 1 through 9 {
+  $percentage: 10% * $i;
+  $shade: adjust-color($color, $lightness: $percentage - 50%);
+  $shades: map-merge($shades, (100 * $i: $shade));
+}
+
+@return $shades;
 }
 
 @function create-theme($theme-colors) {
-  $theme: ();
-  
-  @each $name, $color in $theme-colors {
-    $shades: create-shades($color);
-    
-    @each $shade-level, $shade-color in $shades {
-      $variable-name: unquote("--#{$name}-#{$shade-level}");
-      $theme: map-merge($theme, ($variable-name: $shade-color));
-    }
+  $theme: (
+  );
+
+@each $name, $color in $theme-colors {
+  $shades: create-shades($color);
+
+  @each $shade-level, $shade-color in $shades {
+    $variable-name: unquote("--#{$name}-#{$shade-level}");
+    $theme: map-merge($theme, ($variable-name: $shade-color));
   }
-  
-  @return $theme;
 }
 
+@return $theme;
+}

@@ -80,6 +80,20 @@ main {
     border-radius: var(--border);
     font-family: var(--font-family-mono);
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-mono);
+  }
+
+  time {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-label);
+  }
 }
 
 /* Content specific styling */
@@ -195,10 +209,36 @@ main {
     flex: 1;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 
     &>a {
       text-decoration: underline;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
+}
+
+.post-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-bottom: .8rem;
+
+  p {
+    color: var(--primary);
+    font-family: var(--font-family-mono);
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+  }
+
+  time {
+    color: var(--primary);
+    font-family: var(--font-family-mono);
   }
 }
 

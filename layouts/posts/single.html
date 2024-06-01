@@ -16,10 +16,12 @@
 
 {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
 {{- $dateHuman := .Date | time.Format ":date_long" }}
-<p>{{ .Title }}</p>
-<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+<div class="post-heading">
+  <p>$ {{ .Title }}</p>
+  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+</div>
 
-
+<hr>
 
 <section class="content">
   {{ .Content }}

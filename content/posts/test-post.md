@@ -11,6 +11,12 @@ banner = "images/test.jpg"
 
 Hello this is a test. **hello**
 
+_Cursive_
+
+# Header
+
+[Link](#header)
+
 ```rs
 struct Test {
  x: i32;

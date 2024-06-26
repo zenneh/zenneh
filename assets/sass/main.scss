@@ -81,6 +81,11 @@ main {
     font-family: var(--font-family-mono);
   }
 
+  img {
+    display: block;
+    border-radius: var(--border);
+  }
+
   h1,
   h2,
   h3,
@@ -88,6 +93,7 @@ main {
   h5,
   h6 {
     font-family: var(--font-family-mono);
+    font-weight: 700;
   }
 
   time {
@@ -120,6 +126,13 @@ main {
   }
 
   h1 {
+    &::before {
+      content: "~";
+      margin-right: .8rem;
+      color: var(--accent);
+      display: inline-block;
+    }
+
     margin-bottom: calc(var(--font-h1) / 4);
     font-size: var(--font-h1);
   }
@@ -150,8 +163,17 @@ main {
 
   a,
   p,
+  ul,
+  ol,
   {
   margin-bottom: calc(var(--font-body));
+}
+
+ul,
+li::before {
+  content: ">";
+  display: inline-block;
+  margin-right: .4rem;
 }
 }
 

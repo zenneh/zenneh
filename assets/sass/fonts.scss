@@ -25,6 +25,7 @@
   font-family: 'Literata';
   src: url('/personal-site/fonts/literata/Literata-Italic-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: normal;
+  font-weight: 100 900;
   font-style: italic;
 }
 
@@ -32,7 +33,7 @@
 @font-face {
   font-family: 'Monaspace';
   src: url('/personal-site/fonts/monaspace/MonaspaceNeonVarVF[wght,wdth,slnt].ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: normal;
 }
 
@@ -47,7 +48,7 @@
 @font-face {
   font-family: 'Jetbrains Mono';
   src: url('/personal-site/fonts/jetbrains-mono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: italic;
 }
 
@@ -55,6 +56,6 @@
 @font-face {
   font-family: 'Inter';
   src: url('/personal-site/fonts/inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 100 900;
+  font-style: normal italic;
 }

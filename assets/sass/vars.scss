@@ -41,16 +41,23 @@ $offset: 5 * $amount;
 $themes: (
 );
 
-$colors: (
+$base-theme: (
   primary: #afcfc0,
   secondary: #42636d,
   accent: #7d9db1,
   background: #040605,
-  surface: #040605,
   text: #e2eee8
 );
 
-$theme: create-theme($colors);
+$new-theme: (
+  primary: #bcc8aa,
+  secondary: #446963,
+  accent: #6c929f,
+  text: #f2f4ee,
+  background: #0a0c08,
+);
+
+$theme: create-theme($base-theme);
 
 @mixin css-variables($theme-map) {
   @each $name, $color in $theme-map {

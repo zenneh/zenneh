@@ -1,0 +1,31 @@
+{{- define "main" }}
+<section class="posts">
+    {{ $posts := where .Site.RegularPages "Section" "blog" }}
+    <h4 class="title">Recent posts</h4>
+    <hr />
+    <ul>
+        {{ range $posts}}
+        <li>{{ partial "inline/blog/link.html" . }}</li>
+        {{ end }}
+    </ul>
+</section>
+{{- end}} {{- define "partials/inline/blog/link.html"}}
+<div class="post">
+    <p id="post-date"><time>{{ time.Format "January 2, 2006" .Date }}</time></p>
+    <p>~</p>
+    <div class="post-content">
+        <a href="{{ .RelPermalink }}">
+            <p id="post-link-title">{{ .Title }}</p>
+        </a>
+        {{ with .GetTerms "tags" }}
+        <ul class="tags">
+            {{ range . }}
+            <li>
+                <a class="tag" href="{{ .RelPermalink }}">{{- .LinkTitle }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+</div>
+{{- end}}

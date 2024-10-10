@@ -2,7 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = "Very cool site"
 
-markup.highlight.style = "github-dark"
+markup.highlight.style = "onedark"
 
 [[menus.main]]
 name = 'root'
@@ -10,8 +10,8 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'posts'
-pageRef = '/posts'
+name = 'blog'
+pageRef = '/blog'
 weight = 20
 
 [[menus.main]]
@@ -26,6 +26,6 @@ git = "https://github.com/zenneh"
 instagram = "https://instagram.com/senne.wertelaers"
 
 [module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+[module.hugoVersion]
+extended = false
+min = "0.116.0"
